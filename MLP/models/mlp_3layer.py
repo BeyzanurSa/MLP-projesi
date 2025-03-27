@@ -57,7 +57,9 @@ class MLPClassifier:
         for key in grads:
             self.parameters[key[1:]] -= self.learning_rate * grads[key]
     
-    def fit(self, X_train, y_train, X_test=None, y_test=None, n_steps=5000, print_cost=True):
+    def fit(self, X_train, y_train, X_test=None, y_test=None, n_steps=5000, print_cost=True, optimizer=None):
+        if optimizer is not None:
+            print(f"Optimizer '{optimizer}' is specified but not used in this implementation.")
         self.train_costs = []
         self.test_costs = []
         for i in range(n_steps):
