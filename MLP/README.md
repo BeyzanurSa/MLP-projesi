@@ -103,3 +103,15 @@ veya doğrudan:
 ```bash
 pip install numpy pandas scikit-learn matplotlib seaborn torch
 ```
+
+---
+
+## Kod Dosyalarının Açıklamaları
+
+Projede kullanılan ana Python dosyalarının işlevleri aşağıda açıklanmıştır:
+
+- **`train.py`**: Bu dosya, yalnızca 2 katmanlı MLP modelinin (`mlp_2layer.py`) eğitimini ve değerlendirmesini içerir. ReLU ve Tanh aktivasyon fonksiyonları ile model performansı karşılaştırılmıştır.
+- **`train2.py`**: Bu dosya, yalnızca 3 katmanlı MLP modelinin (`mlp_3layer.py`) eğitimini ve değerlendirmesini içerir. Ekstra bir gizli katman eklenerek modelin performansı analiz edilmiştir.
+- **`train3.py`**: Bu dosya, 2 katmanlı MLP, 3 katmanlı MLP ve PyTorch kullanılarak oluşturulan bir sinir ağı modelinin performanslarını karşılaştırmalı olarak göstermektedir. 
+
+Veri seti, düzgün bir veri seti olduğu için ve Xavier başlatması (Xavier Initialization) kullanılarak ağırlıkların doğru bir şekilde başlatılması sayesinde, modeller overfitting olmadan %100 doğruluk (accuracy) değerine ulaşmıştır. Öğrenme eğrisi (learning curve) oluşturularak modellerin overfitting yapmadığı görselleştirilmiştir.
